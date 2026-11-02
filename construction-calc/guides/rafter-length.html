@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to calculate rafter length with overhang and ridge</title>
+<meta name="description" content="On a 6/12 roof with a 12 ft run, the rafter line is 13 ft 5 in before overhang. A 1 ft overhang adds 1 ft 1-7/16 in. Tables for each pitch and ridge.">
+<link rel="canonical" href="https://devjq.github.io/avira-apps/construction-calc/guides/rafter-length.html">
+<style>
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 680px; margin: 0 auto; padding: 24px 16px; color: #1d1d1f; background: #fff; }
+  h1 { font-size: 28px; line-height: 1.25; } h2 { font-size: 20px; margin-top: 28px; }
+  @media (prefers-color-scheme: dark) { body { color: #f5f5f7; background: #111; } a { color: #6cb4ff; } }
+  .crumbs { font-size: 14px; color: #6e6e73; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+  table { border-collapse: collapse; font-size: 15px; width: max-content; min-width: 100%; }
+  th, td { border: 1px solid #c7c7cc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f7; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  caption { text-align: left; font-size: 14px; color: #6e6e73; padding: 4px 0 8px; }
+  .box { border: 1px solid #c7c7cc; border-radius: 8px; padding: 12px 16px; margin: 24px 0; }
+  .foot { margin-top: 40px; padding-top: 12px; border-top: 1px solid #c7c7cc; font-size: 14px; color: #6e6e73; }
+  @media (prefers-color-scheme: dark) { th { background: #1c1c1e; } th, td, .box, .foot { border-color: #48484a; } .crumbs, .foot, caption { color: #98989d; } }
+</style>
+</head>
+<body>
+<p class="crumbs"><a href="../../index.html">Avira LLC Apps</a> › <a href="../index.html">Shim</a> › <a href="index.html">Guides</a> › Rafter length</p>
+
+<h1>How to calculate rafter length (with overhang and ridge)</h1>
+<p>On a 6/12 roof with a 12-foot horizontal run, the common rafter line length is 13' 5" (13.416 ft) before any ridge deduction. A 1-foot horizontal overhang adds 1' 1-7/16", for 14' 6-7/16" in all. To get the cut length, deduct half the ridge board's thickness, measured horizontally and multiplied by the rafter factor. For a 1-1/2-inch ridge at 6/12, that is 13/16", which leaves 14' 5-9/16". The numbers assume a horizontal run and overhang, a 1-1/2-inch ridge board, and a common rafter with no hip or valley.</p>
+
+<h2>Pitch chart</h2>
+<p>Rise per foot is the pitch in inches. The rafter factor is √(1 + (pitch ÷ 12)²). Multiply a horizontal length by it to get the length along the rafter. The angle is measured from level.</p>
+<!-- BEGIN:table-pitch -->
+<div class="scroll"><table>
+<thead><tr>
+<th>Pitch</th>
+<th class="n">Angle (degrees)</th>
+<th class="n">Rise per foot (in)</th>
+<th class="n">Rafter factor</th>
+</tr></thead><tbody>
+<tr>
+<td>3/12</td>
+<td class="n">14.04</td>
+<td class="n">3</td>
+<td class="n">1.0308</td>
+</tr>
+<tr>
+<td>4/12</td>
+<td class="n">18.43</td>
+<td class="n">4</td>
+<td class="n">1.0541</td>
+</tr>
+<tr>
+<td>5/12</td>
+<td class="n">22.62</td>
+<td class="n">5</td>
+<td class="n">1.0833</td>
+</tr>
+<tr>
+<td>6/12</td>
+<td class="n">26.57</td>
+<td class="n">6</td>
+<td class="n">1.1180</td>
+</tr>
+<tr>
+<td>7/12</td>
+<td class="n">30.26</td>
+<td class="n">7</td>
+<td class="n">1.1577</td>
+</tr>
+<tr>
+<td>8/12</td>
+<td class="n">33.69</td>
+<td class="n">8</td>
+<td class="n">1.2019</td>
+</tr>
+<tr>
+<td>9/12</td>
+<td class="n">36.87</td>
+<td class="n">9</td>
+<td class="n">1.2500</td>
+</tr>
+<tr>
+<td>10/12</td>
+<td class="n">39.81</td>
+<td class="n">10</td>
+<td class="n">1.3017</td>
+</tr>
+<tr>
+<td>11/12</td>
+<td class="n">42.51</td>
+<td class="n">11</td>
+<td class="n">1.3566</td>
+</tr>
+<tr>
+<td>12/12</td>
+<td class="n">45.00</td>
+<td class="n">12</td>
+<td class="n">1.4142</td>
+</tr>
+</tbody></table></div>
+<!-- END:table-pitch -->
+
+<h2>Line length by run and pitch</h2>
+<p>Common rafter line length, before any overhang or ridge deduction. Run is down the side, pitch is across the top.</p>
+<!-- BEGIN:table-line -->
+<div class="scroll"><table>
+<thead><tr>
+<th>Run</th>
+<th class="n">4/12</th>
+<th class="n">5/12</th>
+<th class="n">6/12</th>
+<th class="n">8/12</th>
+<th class="n">10/12</th>
+<th class="n">12/12</th>
+</tr></thead><tbody>
+<tr>
+<td>6 ft</td>
+<td class="n">6' 3-7/8"</td>
+<td class="n">6' 6"</td>
+<td class="n">6' 8-1/2"</td>
+<td class="n">7' 2-9/16"</td>
+<td class="n">7' 9-3/4"</td>
+<td class="n">8' 5-13/16"</td>
+</tr>
+<tr>
+<td>8 ft</td>
+<td class="n">8' 5-3/16"</td>
+<td class="n">8' 8"</td>
+<td class="n">8' 11-5/16"</td>
+<td class="n">9' 7-3/8"</td>
+<td class="n">10' 4-15/16"</td>
+<td class="n">11' 3-3/4"</td>
+</tr>
+<tr>
+<td>10 ft</td>
+<td class="n">10' 6-1/2"</td>
+<td class="n">10' 10"</td>
+<td class="n">11' 2-3/16"</td>
+<td class="n">12' 0-1/4"</td>
+<td class="n">13' 0-3/16"</td>
+<td class="n">14' 1-11/16"</td>
+</tr>
+<tr>
+<td>12 ft</td>
+<td class="n">12' 7-13/16"</td>
+<td class="n">13' 0"</td>
+<td class="n">13' 5"</td>
+<td class="n">14' 5-1/16"</td>
+<td class="n">15' 7-7/16"</td>
+<td class="n">16' 11-5/8"</td>
+</tr>
+<tr>
+<td>14 ft</td>
+<td class="n">14' 9-1/16"</td>
+<td class="n">15' 2"</td>
+<td class="n">15' 7-13/16"</td>
+<td class="n">16' 9-15/16"</td>
+<td class="n">18' 2-11/16"</td>
+<td class="n">19' 9-9/16"</td>
+</tr>
+<tr>
+<td>16 ft</td>
+<td class="n">16' 10-3/8"</td>
+<td class="n">17' 4"</td>
+<td class="n">17' 10-11/16"</td>
+<td class="n">19' 2-3/4"</td>
+<td class="n">20' 9-15/16"</td>
+<td class="n">22' 7-1/2"</td>
+</tr>
+</tbody></table></div>
+<!-- END:table-line -->
+
+<h2>Overhang add-on</h2>
+<p>Add this to the line length for a horizontal overhang: overhang × rafter factor.</p>
+<!-- BEGIN:table-overhang -->
+<div class="scroll"><table>
+<thead><tr>
+<th>Overhang</th>
+<th class="n">4/12</th>
+<th class="n">5/12</th>
+<th class="n">6/12</th>
+<th class="n">8/12</th>
+<th class="n">10/12</th>
+<th class="n">12/12</th>
+</tr></thead><tbody>
+<tr>
+<td>12" horizontal</td>
+<td class="n">1' 0-5/8"</td>
+<td class="n">1' 1"</td>
+<td class="n">1' 1-7/16"</td>
+<td class="n">1' 2-7/16"</td>
+<td class="n">1' 3-5/8"</td>
+<td class="n">1' 5"</td>
+</tr>
+<tr>
+<td>16" horizontal</td>
+<td class="n">1' 4-7/8"</td>
+<td class="n">1' 5-5/16"</td>
+<td class="n">1' 5-7/8"</td>
+<td class="n">1' 7-1/4"</td>
+<td class="n">1' 8-13/16"</td>
+<td class="n">1' 10-5/8"</td>
+</tr>
+<tr>
+<td>24" horizontal</td>
+<td class="n">2' 1-5/16"</td>
+<td class="n">2' 2"</td>
+<td class="n">2' 2-13/16"</td>
+<td class="n">2' 4-7/8"</td>
+<td class="n">2' 7-1/4"</td>
+<td class="n">2' 9-15/16"</td>
+</tr>
+</tbody></table></div>
+<!-- END:table-overhang -->
+
+<h2>Ridge deduction</h2>
+<p>Subtract this for a 1-1/2-inch ridge board: half the ridge thickness (3/4 in), measured horizontally, × rafter factor.</p>
+<!-- BEGIN:table-ridge -->
+<div class="scroll"><table>
+<thead><tr>
+<th>1-1/2 in ridge</th>
+<th class="n">4/12</th>
+<th class="n">5/12</th>
+<th class="n">6/12</th>
+<th class="n">8/12</th>
+<th class="n">10/12</th>
+<th class="n">12/12</th>
+</tr></thead><tbody>
+<tr>
+<td>Ridge deduction</td>
+<td class="n">13/16"</td>
+<td class="n">13/16"</td>
+<td class="n">13/16"</td>
+<td class="n">7/8"</td>
+<td class="n">1"</td>
+<td class="n">1-1/16"</td>
+</tr>
+</tbody></table></div>
+<!-- END:table-ridge -->
+
+<h2>Decimal feet to inches</h2>
+<p>Some calculators and layouts give decimal feet. Multiply by 12 for inches. The last column rounds to the nearest 1/16 inch.</p>
+<!-- BEGIN:table-decimal -->
+<div class="scroll"><table>
+<thead><tr>
+<th class="n">Decimal feet</th>
+<th class="n">Inches (exact)</th>
+<th class="n">Nearest 1/16 in</th>
+</tr></thead><tbody>
+<tr>
+<td class="n">0.05 ft</td>
+<td class="n">0.60</td>
+<td class="n">5/8"</td>
+</tr>
+<tr>
+<td class="n">0.10 ft</td>
+<td class="n">1.20</td>
+<td class="n">1-3/16"</td>
+</tr>
+<tr>
+<td class="n">0.15 ft</td>
+<td class="n">1.80</td>
+<td class="n">1-13/16"</td>
+</tr>
+<tr>
+<td class="n">0.20 ft</td>
+<td class="n">2.40</td>
+<td class="n">2-3/8"</td>
+</tr>
+<tr>
+<td class="n">0.25 ft</td>
+<td class="n">3.00</td>
+<td class="n">3"</td>
+</tr>
+<tr>
+<td class="n">0.30 ft</td>
+<td class="n">3.60</td>
+<td class="n">3-5/8"</td>
+</tr>
+<tr>
+<td class="n">0.35 ft</td>
+<td class="n">4.20</td>
+<td class="n">4-3/16"</td>
+</tr>
+<tr>
+<td class="n">0.40 ft</td>
+<td class="n">4.80</td>
+<td class="n">4-13/16"</td>
+</tr>
+<tr>
+<td class="n">0.45 ft</td>
+<td class="n">5.40</td>
+<td class="n">5-3/8"</td>
+</tr>
+<tr>
+<td class="n">0.50 ft</td>
+<td class="n">6.00</td>
+<td class="n">6"</td>
+</tr>
+<tr>
+<td class="n">0.55 ft</td>
+<td class="n">6.60</td>
+<td class="n">6-5/8"</td>
+</tr>
+<tr>
+<td class="n">0.60 ft</td>
+<td class="n">7.20</td>
+<td class="n">7-3/16"</td>
+</tr>
+<tr>
+<td class="n">0.65 ft</td>
+<td class="n">7.80</td>
+<td class="n">7-13/16"</td>
+</tr>
+<tr>
+<td class="n">0.70 ft</td>
+<td class="n">8.40</td>
+<td class="n">8-3/8"</td>
+</tr>
+<tr>
+<td class="n">0.75 ft</td>
+<td class="n">9.00</td>
+<td class="n">9"</td>
+</tr>
+<tr>
+<td class="n">0.80 ft</td>
+<td class="n">9.60</td>
+<td class="n">9-5/8"</td>
+</tr>
+<tr>
+<td class="n">0.85 ft</td>
+<td class="n">10.20</td>
+<td class="n">10-3/16"</td>
+</tr>
+<tr>
+<td class="n">0.90 ft</td>
+<td class="n">10.80</td>
+<td class="n">10-13/16"</td>
+</tr>
+<tr>
+<td class="n">0.95 ft</td>
+<td class="n">11.40</td>
+<td class="n">11-3/8"</td>
+</tr>
+</tbody></table></div>
+<!-- END:table-decimal -->
+
+<h2>Worked example: 6/12 roof, 12-ft run, 1-ft overhang, 1-1/2-inch ridge</h2>
+<ol>
+  <li><strong>Pitch.</strong> 6/12 means 6 inches of rise per foot of run. The angle is arctan(6 ÷ 12) = 26.57°.</li>
+  <li><strong>Rafter factor.</strong> √(1 + (6 ÷ 12)²) = √1.25 = 1.1180.</li>
+  <li><strong>Run.</strong> 12 ft = 144 in. Line length = 144 × 1.1180 = 160.99 in = <strong>13' 5"</strong>.</li>
+  <li><strong>Rise.</strong> 144 × 6 ÷ 12 = 72 in = 6' 0".</li>
+  <li><strong>Overhang add-on.</strong> 1 ft = 12 in. 12 × 1.1180 = 13.42 in = <strong>1' 1-7/16"</strong>.</li>
+  <li><strong>Line length with overhang.</strong> 160.99 + 13.42 = 174.41 in = <strong>14' 6-7/16"</strong>.</li>
+  <li><strong>Ridge deduction.</strong> 0.75 × 1.1180 = 0.84 in = <strong>13/16"</strong>.</li>
+  <li><strong>Cut length.</strong> 174.41 − 0.84 = 173.57 in = <strong>14' 5-9/16"</strong>.</li>
+</ol>
+
+<h2>Notes</h2>
+<ul>
+  <li>These are common rafter lengths. Hip, valley and jack rafters need their own calculation.</li>
+  <li>Rafter tails, birdsmouth cuts and plumb cuts are not included.</li>
+  <li>If the two sides of a roof differ in pitch or overhang, run each side separately.</li>
+  <li>This is layout geometry, not engineering advice. Rafter size, spacing and span come from the design and your local code.</li>
+</ul>
+
+<div class="box">
+<p><strong>Do it on the job with Shim.</strong> Shim: Construction Calculator for iPhone is coming soon to the App Store. Its roof tool, in Pro, takes a pitch or an angle and a run, and gives the rise, angle and rafter length with and without an overhang. <a href="../index.html">See Shim's page</a>.</p>
+</div>
+
+<h2>More guides</h2>
+<ul>
+  <li><a href="steps-for-ceiling-height.html">How many steps for a 9-foot ceiling?</a></li>
+  <li><a href="concrete-bags-for-a-slab.html">How many bags of concrete for a 10x10 slab?</a></li>
+  <li><a href="concrete-for-fence-posts.html">How many bags of concrete per fence post?</a></li>
+  <li><a href="index.html">All construction math guides</a></li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Right-triangle geometry: the Pythagorean theorem, and the tangent of the roof angle. Each formula is written out in the worked example above.</li>
+</ul>
+
+<div class="foot">
+<p>Published by Avira LLC · Updated 2026-11-01 · Written with AI assistance. Every number is computed with the same formulas as Shim and checked against worked examples.</p>
+<p><a href="how-these-guides-are-made.html">How these guides are made</a> · Contact <a href="mailto:avirallcdev@gmail.com">avirallcdev@gmail.com</a></p>
+</div>
+</body>
+</html>
